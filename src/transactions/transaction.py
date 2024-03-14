@@ -4,3 +4,6 @@ class Transaction:
         self.reciever = reciever
         self.amount = amount
         self.metadata = metadata
+
+    def __str__(self):
+        return f"{self.sender}{self.reciever}{self.amount}{self.metadata}"
