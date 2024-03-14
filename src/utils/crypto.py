@@ -1,3 +1,4 @@
+from ecdsa import SigningKey, SECP256k1
 import hashlib
 
 
@@ -12,3 +13,13 @@ def hash_data(data):
     data_string = str(data).encode()
     hash_object = hashlib.sha256(data_string)
     return hash_object.hexdigest()
+
+
+def generate_ecc_keys():
+    private_key = SigningKey.generate(curve=SECP256k1)
+    public_key = private_key.verifying_key
+
+    private_key_str = private_key.to_string().hex()
+    public_key_str = public_key.to_string().hex()
+
+    return private_key_str, public_key_str
