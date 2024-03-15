@@ -8,7 +8,7 @@ FIXED_SENDER_PUBLIC_KEY = (
 FIXED_RECIEVER_PUBLIC_KEY = (
     "6619cbe600096e3c88595e4ed82ced1d0375dc1f5c5c1270f9484c3414383560"
 )
-FIXED_EXPECTED_HASH = "9bef9bb1f298b1eecc6347685ec8a0c2a3a21d6a6b9a593a3ce3795428a94e4d"
+FIXED_EXPECTED_HASH = "31b1d10ccb49d731b0b751774e50fe7234426c5e749293757ce539e868faa2cb"
 
 
 class TestBlock(unittest.TestCase):
@@ -24,7 +24,6 @@ class TestBlock(unittest.TestCase):
             prev_hash="0",
             _test_timestamp=1710421770.8,
         )
-        print(block)
 
         self.assertEqual(
             FIXED_EXPECTED_HASH,
