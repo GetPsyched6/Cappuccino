@@ -1,5 +1,6 @@
 from ..utils.crypto import hash_data
 import time
+import json
 
 
 class Block:
@@ -22,6 +23,17 @@ class Block:
         block_string = str(self)
         return hash_data(block_string)
 
+    def to_dict(self):
+        return {
+            "index": self.index,
+            "timestamp": self._timestamp,
+            "transactions": self.transactions,
+            "prev_hash": self.prev_hash,
+            "nonce": self.nonce,
+        }
+
     def __str__(self):
         transactions_string = "".join([str(tx) for tx in self.transactions])
-        return f"{self.index}{self._timestamp}{transactions_string}{self.prev_hash}{self.nonce}"
+        block_dict = self.to_dict()
+        block_dict["transactions"] = transactions_string
+        return json.dumps(block_dict, sort_keys=True)
