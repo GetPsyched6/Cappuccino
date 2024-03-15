@@ -13,22 +13,27 @@ FIXED_EXPECTED_HASH = "31b1d10ccb49d731b0b751774e50fe7234426c5e749293757ce539e86
 
 class TestBlock(unittest.TestCase):
 
+    tx1 = Transaction(FIXED_SENDER_PUBLIC_KEY, FIXED_RECIEVER_PUBLIC_KEY, amount=1)
+    tx2 = Transaction(FIXED_SENDER_PUBLIC_KEY, FIXED_RECIEVER_PUBLIC_KEY, amount=50)
+    transactions = [str(tx1), str(tx2)]
+
+    block = Block(
+        index=1,
+        transactions=transactions,
+        prev_hash="0",
+        _test_timestamp=1710421770.8,
+    )
+
     def test_block_hashing(self):
-        tx1 = Transaction(FIXED_SENDER_PUBLIC_KEY, FIXED_RECIEVER_PUBLIC_KEY, amount=1)
-        tx2 = Transaction(FIXED_SENDER_PUBLIC_KEY, FIXED_RECIEVER_PUBLIC_KEY, amount=50)
-        transactions = [str(tx1), str(tx2)]
-
-        block = Block(
-            index=1,
-            transactions=transactions,
-            prev_hash="0",
-            _test_timestamp=1710421770.8,
-        )
-
         self.assertEqual(
             FIXED_EXPECTED_HASH,
-            block.compute_hash(),
+            self.block.compute_hash(),
             "The block hash should match the expected hash",
+        )
+
+    def test_block_str(self):
+        self.assertIsInstance(
+            str(self.block), str, "The block string function should return type string"
         )
 
 
