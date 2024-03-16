@@ -8,20 +8,32 @@ FIXED_SENDER_PUBLIC_KEY = (
 FIXED_RECIEVER_PUBLIC_KEY = (
     "6619cbe600096e3c88595e4ed82ced1d0375dc1f5c5c1270f9484c3414383560"
 )
-FIXED_EXPECTED_HASH = "31b1d10ccb49d731b0b751774e50fe7234426c5e749293757ce539e868faa2cb"
+FIXED_EXPECTED_HASH = "b38ebad6a651cc3b6943ccb6cff0aff12f13de429d9dca0328326fcb1b5bda4d"
+
+FIXED_TEST_TIMESTAMP = 1710421770.8
 
 
 class TestBlock(unittest.TestCase):
 
-    tx1 = Transaction(FIXED_SENDER_PUBLIC_KEY, FIXED_RECIEVER_PUBLIC_KEY, amount=1)
-    tx2 = Transaction(FIXED_SENDER_PUBLIC_KEY, FIXED_RECIEVER_PUBLIC_KEY, amount=50)
+    tx1 = Transaction(
+        FIXED_SENDER_PUBLIC_KEY,
+        FIXED_RECIEVER_PUBLIC_KEY,
+        _test_timestamp=FIXED_TEST_TIMESTAMP,
+        amount=1,
+    )
+    tx2 = Transaction(
+        FIXED_SENDER_PUBLIC_KEY,
+        FIXED_RECIEVER_PUBLIC_KEY,
+        _test_timestamp=FIXED_TEST_TIMESTAMP,
+        amount=50,
+    )
     transactions = [str(tx1), str(tx2)]
 
     block = Block(
         index=1,
         transactions=transactions,
         prev_hash="0",
-        _test_timestamp=1710421770.8,
+        _test_timestamp=FIXED_TEST_TIMESTAMP,
     )
 
     def test_block_hashing(self):

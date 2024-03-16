@@ -8,10 +8,22 @@ FIXED_RECIEVER_PUBLIC_KEY = (
     "6619cbe600096e3c88595e4ed82ced1d0375dc1f5c5c1270f9484c3414383560"
 )
 
+FIXED_TEST_TIMESTAMP = 1710421770.8
+
 
 class TestTransaction(unittest.TestCase):
-    tx1 = Transaction(FIXED_SENDER_PUBLIC_KEY, FIXED_RECIEVER_PUBLIC_KEY, amount=1)
-    tx2 = Transaction(FIXED_SENDER_PUBLIC_KEY, FIXED_RECIEVER_PUBLIC_KEY, amount=50)
+    tx1 = Transaction(
+        FIXED_SENDER_PUBLIC_KEY,
+        FIXED_RECIEVER_PUBLIC_KEY,
+        _test_timestamp=FIXED_TEST_TIMESTAMP,
+        amount=1,
+    )
+    tx2 = Transaction(
+        FIXED_SENDER_PUBLIC_KEY,
+        FIXED_RECIEVER_PUBLIC_KEY,
+        _test_timestamp=FIXED_TEST_TIMESTAMP,
+        amount=50,
+    )
 
     def test_transaction_str(self):
         self.assertIsInstance(
