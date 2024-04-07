@@ -19,6 +19,11 @@ class Block:
     def timestamp(self):
         return self._timestamp
 
+    @staticmethod
+    def from_json(block_data):
+        data = json.loads(block_data)
+        return Block(**data)
+
     def compute_hash(self):
         block_string = str(self)
         return hash_data(block_string)
