@@ -31,6 +31,8 @@ class TestTransaction(unittest.TestCase):
             str,
             "The transaction string function should return type string",
         )
+        
+    # TODO: test to_dict_from_json and is_valid()
 
 
 if __name__ == "__main__":
