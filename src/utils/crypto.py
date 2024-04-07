@@ -23,3 +23,11 @@ def generate_ecc_keys():
     public_key_str = public_key.to_string().hex()
 
     return private_key_str, public_key_str
+
+
+def sign_data(data, sender_private_key):
+    return sender_private_key.sign(str.encode(str(data)))
+
+
+def verify_signature(data, signature, sender_public_key):
+    return sender_public_key.verify(signature, str.encode(str(data)))
