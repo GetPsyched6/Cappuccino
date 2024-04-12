@@ -1,12 +1,25 @@
 # Cappuccino
 
-## A foundational blockchain handbuilt from the ground up using secure cryptographical methods. (Written in Python)
+## A handcrafted blockchain core, built in Python focusing on secure, efficient transactions.
 
-![Frame 22](https://github.com/GetPsyched6/Cappuccino/assets/3417276/66c8aa18-2c50-43e5-a180-477f04cd5cb8)
+```
+            xxxxxx
+         xxxxxxxxxxxx                  
+    xxxxxxxxxxxxxxxxxxxxxx    
+ $@xxxxxxxxxxxxxxxxxxxxxxxx$@ 
+ $$$$@@xxxxxxxxxxxxxxx@$$%*!! 
+ $$$$$$$$@@@xxxxx@$$%*!!!!!!! 
+ $$$$$$$$$$$$$$%*!!!!!!!!!!!!
+ $$$$$$$$$$$$$$*!!!!!!!!!!!!!
+ $$$$$$$$$$$$$$*!!!!!!!!!!!!! 
+    $$$$$$$$$$$!!!!!!!!!!*    
+         $$$$$$*!!!!*  
+            $$$*!*
+```           
 
-(This project is WIP. Feel free to contribute!)
+This project is a Work in Progress. Feel free to contribute!
 
-The Tiramisu project (also WIP) will be the coin built on top of Cappuccino. (Like how Tiramisu is made using Coffee)
+The [Tiramisu project](https://github.com/GetPsyched6/Tiramisu-WIP) [related] will be a coin built on top of Cappuccino.
 
 ### To Contribute: (Create an issue beforehand)
 
@@ -16,6 +29,8 @@ The Tiramisu project (also WIP) will be the coin built on top of Cappuccino. (Li
 - ```git checkout dev```
 - ```git pull```
 - ```pip install -r ./requirements.txt```
+- Add contribution (with unit tests preferably)
+- ```python -m unittest discover``` (100% passed tests)
 - Create a pull request to origin/dev
 
 Roshin Nishad 2024© - MIT License.
