@@ -1,6 +1,6 @@
 # Cappuccino
 
-## A foundational blockchain handbuilt from the ground up using secure cryptographical methods. (Written in Python)
+## A handcrafted blockchain core, built in Python with a focus on secure, efficient transactions.
 
 ```
             xxxxxx
