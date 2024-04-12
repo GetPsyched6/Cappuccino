@@ -17,9 +17,9 @@
             $$$*!*
 ```           
 
-(This project is WIP. Feel free to contribute!)
+This project is a Work in Progress. Feel free to contribute!
 
-The Tiramisu project (also WIP) will be the coin built on top of Cappuccino. (Like how Tiramisu is made using Coffee)
+The [Tiramisu project](https://github.com/GetPsyched6/Tiramisu-WIP) will be the coin built on top of Cappuccino.
 
 ### To Contribute: (Create an issue beforehand)
 
