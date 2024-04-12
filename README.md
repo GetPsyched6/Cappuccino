@@ -19,7 +19,7 @@
 
 This project is a Work in Progress. Feel free to contribute!
 
-The [Tiramisu project](https://github.com/GetPsyched6/Tiramisu-WIP) will be the coin built on top of Cappuccino.
+The [Tiramisu project](https://github.com/GetPsyched6/Tiramisu-WIP) [related] will be a coin built on top of Cappuccino.
 
 ### To Contribute: (Create an issue beforehand)
 
