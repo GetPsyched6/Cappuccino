@@ -1,6 +1,6 @@
 # Cappuccino
 
-## A handcrafted blockchain core, built in Python with a focus on secure, efficient transactions.
+## A handcrafted blockchain core, built in Python focusing on secure, efficient transactions.
 
 ```
             xxxxxx
@@ -29,6 +29,8 @@ The [Tiramisu project](https://github.com/GetPsyched6/Tiramisu-WIP) [related] wi
 - ```git checkout dev```
 - ```git pull```
 - ```pip install -r ./requirements.txt```
+- Add contribution (with unit tests preferably)
+- ```python -m unittest discover``` (100% passed tests)
 - Create a pull request to origin/dev
 
 Roshin Nishad 2024© - MIT License.
